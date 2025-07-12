@@ -369,9 +369,9 @@ public class ESP32FS implements Tool {
       System.out.println("[SPIFFS] freq   : "+flashFreq);
       System.out.println();
       if(esptool.getAbsolutePath().endsWith(".py"))
-        sysExec(new String[]{pythonCmd, esptool.getAbsolutePath(), "--chip", mcu, "--baud", uploadSpeed, "--port", serialPort, "--before", "default_reset", "--after", "hard_reset", "write_flash", "-z", "--flash_mode", flashMode, "--flash_freq", flashFreq, "--flash_size", "detect", ""+spiStart, imagePath});
+        sysExec(new String[]{pythonCmd, esptool.getAbsolutePath(), "--chip", mcu, "--baud", uploadSpeed, "--port", serialPort, "--before", "default-reset", "--after", "hard-reset", "write-flash", "-z", "--flash-mode", flashMode, "--flash-freq", flashFreq, "--flash-size", "detect", ""+spiStart, imagePath});
       else
-        sysExec(new String[]{esptool.getAbsolutePath(), "--chip", mcu, "--baud", uploadSpeed, "--port", serialPort, "--before", "default_reset", "--after", "hard_reset", "write_flash", "-z", "--flash_mode", flashMode, "--flash_freq", flashFreq, "--flash_size", "detect", ""+spiStart, imagePath});
+        sysExec(new String[]{esptool.getAbsolutePath(), "--chip", mcu, "--baud", uploadSpeed, "--port", serialPort, "--before", "default-reset", "--after", "hard-reset", "write-flash", "-z", "--flash-mode", flashMode, "--flash-freq", flashFreq, "--flash-size", "detect", ""+spiStart, imagePath});
     }
   }
 
