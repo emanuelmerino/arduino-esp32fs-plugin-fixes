@@ -360,8 +360,8 @@ public class ESP32FS implements Tool {
         sysExec(new String[]{espota.getAbsolutePath(), "-i", serialPort, "-p", "3232", "-s", "-f", imagePath});
     } else {
       String mcu = BaseNoGui.getBoardPreferences().get("build.mcu");
-      String flashMode = BaseNoGui.getBoardPreferences().get("build.flash_mode");
-      String flashFreq = BaseNoGui.getBoardPreferences().get("build.flash_freq");
+      String flashMode = BaseNoGui.getBoardPreferences().get("build.flash-mode");
+      String flashFreq = BaseNoGui.getBoardPreferences().get("build.flash-freq");
       System.out.println("[SPIFFS] address: "+spiStart);
       System.out.println("[SPIFFS] port   : "+serialPort);
       System.out.println("[SPIFFS] speed  : "+uploadSpeed);
