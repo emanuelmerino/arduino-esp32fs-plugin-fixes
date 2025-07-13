@@ -3,7 +3,7 @@ sudo: false
 language: java
 
 os:
-  - linux
+  - macOS
 
 addons:
   apt:
@@ -11,12 +11,12 @@ addons:
     - ant
 
 jdk:
-  - oraclejdk8
+  - jdk24
 
 script:
   - export SRC=$PWD
   - cd $HOME
-  - export TAG=1.6.12
+  - export TAG=1.0.1
   - wget https://github.com/arduino/Arduino/archive/$TAG.zip
   - unzip $TAG.zip
   - rm $TAG.zip
