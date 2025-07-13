@@ -23,7 +23,7 @@ echo "lib_path: $lib_path"
 set -e
 
 mkdir -p bin
-/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home/bin/javac -target 1.8 -cp "$pde_path:$core_path:$lib_path" \
+/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home/bin/javac -target 24 -cp "$pde_path:$core_path:$lib_path" \
       -d bin src/ESP32FS.java
 
 pushd bin
